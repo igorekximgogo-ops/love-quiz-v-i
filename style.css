@@ -1,0 +1,364 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Comfortaa:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+:root {
+  color-scheme: light;
+  font-family: "Manrope", sans-serif;
+  color: #573a4a;
+  background: #fff4f6;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 12% 18%, #ffe0e9 0, transparent 31%),
+    radial-gradient(ellipse at 90% 82%, #f7e4f2 0, transparent 33%),
+    #fff4f6;
+}
+
+button {
+  font: inherit;
+}
+
+.page {
+  display: grid;
+  min-height: 100vh;
+  place-content: center;
+  justify-items: center;
+  padding: 28px 18px 20px;
+}
+
+.card {
+  position: relative;
+  display: grid;
+  width: min(100%, 560px);
+  min-height: 430px;
+  place-items: center;
+  overflow: hidden;
+  padding: 48px 38px 40px;
+  border: 1px solid transparent;
+  border-radius: 32px;
+  background:
+    linear-gradient(145deg, rgb(255 255 255 / 98%), rgb(255 250 252 / 97%)) padding-box,
+    linear-gradient(145deg, #fff 5%, #f8dce6 52%, #fff 100%) border-box;
+  box-shadow:
+    0 28px 75px rgb(155 91 119 / 15%),
+    0 8px 22px rgb(155 91 119 / 7%),
+    inset 0 1px 0 rgb(255 255 255 / 95%);
+  text-align: center;
+}
+
+.quiz {
+  width: 100%;
+}
+
+.eyebrow {
+  margin: 0 0 18px;
+  color: #d17d9d;
+  font-family: "Comfortaa", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.progress {
+  display: inline-block;
+  margin-bottom: 19px;
+  padding: 7px 13px;
+  border-radius: 999px;
+  background: #fff0f4;
+  color: #bd718d;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.question {
+  min-height: 86px;
+  margin: 0 auto 15px;
+  color: #543447;
+  font-family: "Comfortaa", sans-serif;
+  font-size: clamp(21px, 5vw, 28px);
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.button-arena {
+  position: relative;
+  width: 100%;
+  height: 112px;
+  max-width: 420px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #fff9fb;
+}
+
+.answer {
+  position: absolute;
+  top: 32px;
+  min-width: 112px;
+  min-height: 46px;
+  padding: 11px 20px;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 800;
+  transition: left 160ms ease, top 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+
+.answer:focus-visible {
+  outline: 3px solid #e99ab5;
+  outline-offset: 3px;
+}
+
+.answer-yes {
+  background: #ee8eae;
+  color: white;
+  box-shadow: 0 7px 16px rgb(221 119 156 / 25%);
+}
+
+.answer-yes:hover {
+  background: #e77c9f;
+  box-shadow: 0 9px 20px rgb(221 119 156 / 32%);
+  transform: translateY(-2px);
+}
+
+.answer-no {
+  background: #f7eaf0;
+  color: #9b7285;
+}
+
+.answer-no:hover {
+  background: #f2dce5;
+}
+
+.sparkle {
+  position: absolute;
+  color: #f2bfd0;
+  pointer-events: none;
+}
+
+.sparkle-one {
+  top: 27px;
+  left: 29px;
+  font-size: 22px;
+}
+
+.sparkle-two {
+  right: 30px;
+  bottom: 27px;
+  font-size: 28px;
+}
+
+.floating-hearts {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+  visibility: hidden;
+}
+
+.floating-hearts.is-active {
+  visibility: visible;
+}
+
+.floating-heart {
+  position: absolute;
+  bottom: -32px;
+  color: #ed78a0;
+  font-size: 24px;
+  opacity: 0;
+  text-shadow: 0 2px 8px rgb(208 91 133 / 30%);
+  animation: float-heart 3.8s linear infinite;
+}
+
+.heart-one {
+  left: 7%;
+  animation-delay: 0s;
+}
+
+.heart-two {
+  left: 19%;
+  font-size: 18px;
+  animation-delay: 0.7s;
+}
+
+.heart-three {
+  left: 32%;
+  font-size: 27px;
+  animation-delay: 1.4s;
+}
+
+.heart-four {
+  left: 46%;
+  font-size: 19px;
+  animation-delay: 0.4s;
+}
+
+.heart-five {
+  left: 61%;
+  font-size: 25px;
+  animation-delay: 2.1s;
+}
+
+.heart-six {
+  left: 73%;
+  font-size: 18px;
+  animation-delay: 1s;
+}
+
+.heart-seven {
+  left: 84%;
+  font-size: 28px;
+  animation-delay: 1.7s;
+}
+
+.heart-eight {
+  left: 94%;
+  font-size: 17px;
+  animation-delay: 2.5s;
+}
+
+.ending {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  animation: appear 650ms ease both;
+}
+
+.heart {
+  position: relative;
+  display: grid;
+  width: min(100%, 330px);
+  aspect-ratio: 1;
+  place-items: center;
+  margin: 0 auto 13px;
+  color: white;
+  filter: drop-shadow(0 12px 13px rgb(208 91 133 / 23%));
+  z-index: 1;
+}
+
+.heart-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.heart span {
+  position: relative;
+  z-index: 1;
+  margin-top: 22px;
+  font-family: "Caveat", cursive;
+  font-size: 40px;
+  font-weight: 700;
+  text-shadow: 0 2px 7px rgb(148 52 89 / 23%);
+}
+
+.love-note {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: #d7658d;
+  font-family: "Caveat", cursive;
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.ending-caption {
+  position: relative;
+  z-index: 1;
+  margin: 16px 0 0;
+  color: #a77d90;
+  font-family: "Caveat", cursive;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.footer-note {
+  margin: 16px 0 0;
+  color: #bd8ca0;
+  font-size: 12px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes float-heart {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0.7) rotate(-12deg);
+  }
+
+  15% {
+    opacity: 0.9;
+  }
+
+  85% {
+    opacity: 0.75;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-520px) scale(1.15) rotate(14deg);
+  }
+}
+
+@media (max-width: 420px) {
+  .card {
+    min-height: 405px;
+    padding: 42px 19px 31px;
+    border-radius: 25px;
+  }
+
+  .question {
+    min-height: 95px;
+  }
+
+  .answer {
+    min-width: 102px;
+    padding-inline: 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .floating-heart {
+    animation: none;
+    bottom: 12px;
+    opacity: 0.75;
+  }
+}
