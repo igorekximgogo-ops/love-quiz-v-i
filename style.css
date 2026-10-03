@@ -276,14 +276,67 @@ button {
   font-weight: 700;
 }
 
-.code-note {
+.code-form {
   position: relative;
   z-index: 1;
-  margin: 2px 0 0;
+  width: min(100%, 340px);
+  margin: 8px auto 0;
+}
+
+.code-label {
+  display: block;
   color: #bd718d;
   font-family: "Caveat", cursive;
   font-size: 25px;
   font-weight: 700;
+}
+
+.code-entry {
+  display: flex;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+.code-input {
+  min-width: 0;
+  flex: 1;
+  padding: 10px 13px;
+  border: 1px solid #f0cbd8;
+  border-radius: 999px;
+  background: #fff9fb;
+  color: #573a4a;
+  font: inherit;
+  font-size: 13px;
+}
+
+.code-input:focus-visible {
+  outline: 3px solid #e99ab5;
+  outline-offset: 2px;
+}
+
+.code-input[aria-invalid="true"] {
+  border-color: #d7658d;
+}
+
+.code-submit {
+  padding: 10px 15px;
+  border: 0;
+  border-radius: 999px;
+  background: #ee8eae;
+  color: white;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.code-submit:hover {
+  background: #e77c9f;
+}
+
+.code-error {
+  margin: 6px 0 0;
+  color: #c34f72;
+  font-size: 12px;
 }
 
 .ending-caption {
@@ -294,6 +347,43 @@ button {
   font-family: "Caveat", cursive;
   font-size: 22px;
   font-weight: 600;
+}
+
+.letter-page {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  animation: appear 650ms ease both;
+}
+
+.letter-heart {
+  margin: 0 0 4px;
+  font-size: 40px;
+}
+
+.letter-title {
+  margin: 0 0 14px;
+  color: #d7658d;
+  font-family: "Caveat", cursive;
+  font-size: 38px;
+}
+
+.letter-message {
+  margin: 0 auto;
+  max-width: 430px;
+  color: #573a4a;
+  font-family: "Caveat", cursive;
+  font-size: clamp(22px, 5vw, 28px);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.letter-signature {
+  margin: 16px 0 0;
+  color: #d7658d;
+  font-family: "Caveat", cursive;
+  font-size: 27px;
+  font-weight: 700;
 }
 
 .footer-note {

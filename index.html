@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#fff4f6" />
     <title>Для тебя ❤️</title>
-    <link rel="stylesheet" href="style.css?v=9" />
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css?v=10" />
+    <script src="script.js?v=2" defer></script>
   </head>
   <body>
     <main class="page">
@@ -44,8 +44,37 @@
             <span>В+И</span>
           </div>
           <p class="love-note">I love you</p>
-          <p class="code-note">Код: я тебя люблю</p>
+          <form class="code-form" id="code-form">
+            <label class="code-label" for="code-input">Введи секретный код 💌</label>
+            <div class="code-entry">
+              <input
+                class="code-input"
+                id="code-input"
+                name="code"
+                type="text"
+                placeholder="Напиши код"
+                autocomplete="off"
+                required
+              />
+              <button class="code-submit" type="submit">Открыть 💗</button>
+            </div>
+            <p class="code-error" id="code-error" role="alert" hidden>
+              Попробуй ещё раз 💕
+            </p>
+          </form>
           <p class="ending-caption">и это только начало нашей истории 💕</p>
+        </div>
+
+        <div class="letter-page" id="letter-page" hidden>
+          <p class="letter-heart" aria-hidden="true">💌</p>
+          <h2 class="letter-title">Для тебя ❤️</h2>
+          <p class="letter-message">
+            Привет! Если ты это читаешь, значит, ты прошла до конца. Я хотел
+            сказать, что люблю тебя. Я не хочу тебя терять и не хочу, чтобы мы
+            расставались. Я хочу только одного — встретиться с тобой и провести
+            день вместе, чтобы обнимать и целовать тебя.
+          </p>
+          <p class="letter-signature">Твой Игорь 💕</p>
         </div>
       </section>
       <p class="footer-note">сделано с любовью Игорем ✨</p>

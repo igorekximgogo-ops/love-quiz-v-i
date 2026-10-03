@@ -8,7 +8,11 @@ const questions = [
 
 const quiz = document.querySelector("#quiz");
 const ending = document.querySelector("#ending");
+const letterPage = document.querySelector("#letter-page");
 const floatingHearts = document.querySelector("#floating-hearts");
+const codeForm = document.querySelector("#code-form");
+const codeInput = document.querySelector("#code-input");
+const codeError = document.querySelector("#code-error");
 const question = document.querySelector("#question");
 const progress = document.querySelector("#progress");
 const arena = document.querySelector("#button-arena");
@@ -82,6 +86,28 @@ noButton.addEventListener("click", () => {
 });
 
 noButton.addEventListener("pointerenter", moveNoButton);
+
+codeForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const enteredCode = codeInput.value.trim().toLocaleLowerCase("ru-RU").replace(/\s+/g, " ");
+
+  if (enteredCode !== "я тебя люблю") {
+    codeError.hidden = false;
+    codeInput.setAttribute("aria-invalid", "true");
+    codeInput.focus();
+    return;
+  }
+
+  codeError.hidden = true;
+  ending.hidden = true;
+  letterPage.hidden = false;
+  floatingHearts.classList.add("is-active");
+});
+
+codeInput.addEventListener("input", () => {
+  codeError.hidden = true;
+  codeInput.removeAttribute("aria-invalid");
+});
 
 window.addEventListener("resize", placeButtons);
 
