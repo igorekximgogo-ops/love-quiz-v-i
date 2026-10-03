@@ -5,10 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#fff4f6" />
     <title>Для тебя ❤️</title>
-    <link rel="stylesheet" href="style.css?v=15" />
-    <script src="script.js?v=3" defer></script>
+    <link rel="stylesheet" href="style.css?v=16" />
+    <script src="script.js?v=4" defer></script>
   </head>
   <body>
+    <button
+      class="background-easter-egg"
+      id="background-easter-egg"
+      type="button"
+      aria-haspopup="dialog"
+      aria-controls="easter-egg-message"
+    >
+      <span>Нажми сюда 💌</span>
+    </button>
     <main class="page">
       <section class="card" aria-live="polite">
         <div class="sparkle sparkle-one" aria-hidden="true">✦</div>
@@ -79,5 +88,15 @@
       </section>
       <p class="footer-note">сделано с любовью Игорем ✨</p>
     </main>
+    <dialog class="easter-egg-dialog" id="easter-egg-message" aria-labelledby="easter-egg-title">
+      <p class="letter-heart" aria-hidden="true">💌</p>
+      <h2 class="letter-title" id="easter-egg-title">Секретное послание ❤️</h2>
+      <p class="letter-message">
+        Ты — самое прекрасное, что случилось в моей жизни. Я очень тебя люблю! 💕
+      </p>
+      <form method="dialog">
+        <button class="code-submit" type="submit">Закрыть 💗</button>
+      </form>
+    </dialog>
   </body>
 </html>

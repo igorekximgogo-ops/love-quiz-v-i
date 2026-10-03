@@ -13,6 +13,8 @@ const floatingHearts = document.querySelector("#floating-hearts");
 const codeForm = document.querySelector("#code-form");
 const codeInput = document.querySelector("#code-input");
 const codeError = document.querySelector("#code-error");
+const backgroundEasterEgg = document.querySelector("#background-easter-egg");
+const easterEggMessage = document.querySelector("#easter-egg-message");
 const question = document.querySelector("#question");
 const progress = document.querySelector("#progress");
 const arena = document.querySelector("#button-arena");
@@ -107,6 +109,10 @@ codeForm.addEventListener("submit", (event) => {
 codeInput.addEventListener("input", () => {
   codeError.hidden = true;
   codeInput.removeAttribute("aria-invalid");
+});
+
+backgroundEasterEgg.addEventListener("click", () => {
+  easterEggMessage.showModal();
 });
 
 window.addEventListener("resize", placeButtons);
