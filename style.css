@@ -20,8 +20,8 @@ body {
   min-height: 100vh;
   margin: 0;
   background:
-    radial-gradient(ellipse at 12% 18%, #ffe0e9 0, transparent 31%),
-    radial-gradient(ellipse at 90% 82%, #f7e4f2 0, transparent 33%),
+    linear-gradient(rgb(255 244 246 / 54%), rgb(255 244 246 / 54%)),
+    url("autumn-forest.jfif") center / cover fixed,
     #fff4f6;
 }
 
