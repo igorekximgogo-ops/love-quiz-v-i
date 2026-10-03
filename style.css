@@ -276,10 +276,20 @@ button {
   font-weight: 700;
 }
 
+.code-note {
+  position: relative;
+  z-index: 1;
+  margin: 2px 0 0;
+  color: #bd718d;
+  font-family: "Caveat", cursive;
+  font-size: 25px;
+  font-weight: 700;
+}
+
 .ending-caption {
   position: relative;
   z-index: 1;
-  margin: 16px 0 0;
+  margin: 8px 0 0;
   color: #a77d90;
   font-family: "Caveat", cursive;
   font-size: 22px;
